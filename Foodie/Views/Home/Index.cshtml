@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Service Start -->
+
+<partial name="../shared/frontend/_service.cshtml" />
+<!-- Service End -->
+<!-- About Start -->
+<partial name="../shared/frontend/_about.cshtml" />
+<!-- About End -->
+<!-- Menu Start -->
+<div id="menuContent">
+</div>
+<!-- Menu End --> 
+<!-- Reservation Start -->
+<partial name="../shared/frontend/_booking.cshtml" />
+<!-- Reservation Start -->
+<!-- Team Start -->
+<partial name="../shared/frontend/_team.cshtml" />
+<!-- Team End -->
+<!-- Testimonial Start -->
+<partial name="../shared/frontend/_testimonial.cshtml" />
+<!-- Testimonial End -->
+
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

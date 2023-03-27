@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Booking";
+}
+
+<!-- Reservation Start -->
+@*<partial name="../shared/frontend/_reservation.cshtml" />*@
+<!-- Reservation Start -->
+<partial name="../shared/frontend/_booking.cshtml"/>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Foodie.Models.Category>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
+            <h1 class="mb-5">Most Popular Items</h1>
+        </div>
+        <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+            <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                @foreach (var item in Model)
+                {
+                    <li class="nav-item">
+                        <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 " data-bs-toggle="pill" href="#tab-@item.Id">
+                            <i class="fa fa-coffee fa-2x text-primary"></i>
+                            <div class="ps-3">
+                                <small class="text-body">@item.Tags</small>
+                                <h6 class="mt-n1 mb-0">@item.Title</h6>
+                            </div>
+                        </a>
+                    </li>
+                }
+            </ul>
+            <div class="tab-content">
+                @foreach (var cat in Model)
+                {
+                    <div id="tab-@cat.Id" class="tab-pane fade show p-0 active">
+                        <div class="row g-4">
+                            @foreach (var item in cat.Items)
+                            {
+                                <div class="col-lg-6">
+                                    <div class="d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid rounded" src="~/Assets/img/menu-1.jpg" alt="" style="width: 80px;">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
+                                                <span>@item.Title</span>
+                                                <span class="text-primary">₹@item.Price</span>
+                                            </h5>
+                                            <small class="fst-italic">@item.Description</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>*@
+
+@*<div id="content">
+</div>
+@section Scripts {
+    <script>
+        $("document").ready(() => {
+            $("#content").load("/Category/Index.cshtml");
+        });
+    </script>
+}*@
+
